@@ -5,7 +5,7 @@ import connectDB from "./db/db.js";
 import items from "./routes/item.route.js";
 
 dotenv.config({
-  path: "../env",
+  path: "../.env",
 });
 
 const app = express();
