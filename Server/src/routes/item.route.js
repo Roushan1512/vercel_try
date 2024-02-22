@@ -14,4 +14,17 @@ router.get("/getallitems", async (req, res) => {
   }
 });
 
+router.post("/additem", async (req, res) => {
+  try {
+    const name = req.body.name;
+    const description = req.body.description;
+    const data = { name, description };
+    const newitem = await Item.create(data);
+    return res.status(201).send(newitem);
+  } catch (e) {
+    console.log("Post error : ", e);
+    return res.status(500).send("Server Error");
+  }
+});
+
 export default router;
