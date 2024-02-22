@@ -1,11 +1,11 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
-import connectDB from "./db/db.js";
-import items from "./routes/item.route.js";
+import connectDB from "./src/db/db.js";
+import items from "./src/routes/item.route.js";
 
 dotenv.config({
-  path: "../.env",
+  path: "./env",
 });
 
 const app = express();
