@@ -13,6 +13,7 @@ const Input = ({ refresh, setRefresh }) => {
       .post(`${import.meta.env.VITE_URL}/additem`, data)
       .then(() => {
         console.log("Added");
+        setRefresh(refresh+1);
         setName("");
         setDescription("");
       })
